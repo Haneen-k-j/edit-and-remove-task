@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     
+     <!-- Button trigger modal -->
+<a id="insert"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="sticky-top">
+    اضافة حساب
+</a>
+ 
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" dir="rtl">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header bg-primary justify-content-center ">
+           
+          <h5 class="modal-title  text-white" id="exampleModalLabel">اضافة حساب جديد</h5>
+         
+        </div>
+        <div class="modal-body">
+            <div class="container">
+
+              <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>التسلسل</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                    <input type="number" class="form-control mb-2" name="id" id="id">
+                </div>
+                <div>
+                    <label>اسم المستخدم</label>
+                    <input type="text"class="form-control mb-2"  name="name" id="name">
+                </div>
+                <div>
+                    <label>الاسم الرباعي</label>
+                    <input type="text" class="form-control mb-2" name="fullName" id="fullName">
+                </div>
+                <div>
+                    <label>القسم</label>
+                    <input type="text" class="form-control mb-2" name="department" id="department">
+                </div>
+                
+            
+        </div>        
+        </div>
+        <div class="modal-footer justify-content-center">
+          
+            <input type="submit" class="btn btn-outline-primary text-dark  col-3"  value="أضافة">
+       
+      </form>
+          <button input="button" class="btn  btn-outline-warning  col-3 " data-bs-dismiss="modal" > أغلاق</button>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+    <div class="container">
+
+      <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>التسلسل</th>
+                <th>أسم المستخدم</th>
+                <th>الاسم الرباعي</th>
+                <th>القسم</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+        
+       
+
+ 
+        <script src="js/jquery-git.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+ 
+    <script src="js/dataTable.js"></script>
+   
+</body>
+</html>
